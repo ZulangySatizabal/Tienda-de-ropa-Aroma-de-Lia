@@ -1,0 +1,36 @@
+#card-template{
+    margin: 20px;
+}
+
+.card-product{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+}
+.card-product img{
+    /* 258:193 */
+    width: 100%;
+    height: 193px;
+    object-fit: cover;
+}
+.card-body, .card-footer{
+    background-color: #B6B6B6 !important;
+}
+
+.card-title{
+    text-align: center;
+    font-family: "Parisienne", sans-serif;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.card-price{
+    padding-right: 20px;
+    text-decoration: solid ;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;
+}
+.card-footer>.card-button{
+    background-color: #fff;
+    margin: 0 auto;
+}
