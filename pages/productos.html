@@ -24,7 +24,9 @@
 <body>
     <header>
         <!-- logo -->
-        <img src="../assets/img/logo.png" alt="logo" width="150">
+        <a href="../index.html">
+            <img src="../assets/img/logo.png" alt="logo" width="150">
+        </a>
 
         <!-- Separación entre el logo y el resto de los elementos -->
         <div class="separator">
@@ -57,33 +59,10 @@
     </header>
 
     <main>
-        <section id="all-products" class="all-products">
-            
-            <!-- grid para las card -->
-            <div class="row row-cols-1 row-cols-md-3 g-4" id="card-template">
-                <!-- card  -->
-                <div class="col">
-                    <div class="card h-100 card-product">
-                        <img src="../assets/img/white-sweater-front-back.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">White Sweater Front and Back</h5>
-                            <span class="card-price"><strong>$20.000</strong></span>
-                            <p class="card-text">
-                                Un suéter blanco clásico, visto tanto desde el frente como desde la parte trasera. Ideal
-                                para un look limpio y versátil, perfecto para combinar con cualquier atuendo casual o
-                                formal.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <button id="cart-shopping" type="button" class="card-button btn btn-outline-dark">
-                                Comprar
-                                <i class="fa fa-cart-shopping"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section id="productos-container" class="productos-container">
+            <!-- Aquí se añadirán dinámicamente los contenedores de categorías y sus tarjetas -->
         </section>
+
         <section id="hombre" class="categoria-hombre">
             <!-- Productos para hombre aquí -->
             ROPA HOMBRE
@@ -99,5 +78,7 @@
             ROPA NIÑOS
         </section>
     </main>
+
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
