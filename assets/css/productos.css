@@ -23,7 +23,9 @@
 }
 .card-price{
     padding-right: 20px;
-    text-decoration: solid ;
+    text-decoration: solid;
+    
+    font-weight: 600;
 }
 
 .card-footer{

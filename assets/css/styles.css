@@ -8,9 +8,6 @@ body{
 a{
     cursor: pointer;
 }
-img{
-    max-width: 100%;
-}
 
 /* Estilos de encabezado */
 header{
@@ -37,6 +34,7 @@ header a{
 /* Estilos de contenido principal */
 main{
     background-color: #fdf2e5;
+    padding: 40px 80px;
 }
 
 /* Estilos del pie de pagina */
