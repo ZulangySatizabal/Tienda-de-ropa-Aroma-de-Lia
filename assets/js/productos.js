@@ -1,131 +1,13 @@
-// datos de los productos
-const data = {
-  products: [
-    {
-      category: "hombre",
-      items: [
-        {
-          image:
-            "../img/productos/men/casual-shirt-men.avif",
-          name: "Camisa Casual",
-          price: 25.99,
-          description: "Camisa de algodón para ocasiones informales.",
-        },
-        {
-          image:
-            "../img/productos/men/leather-jacket-men.png",
-          name: "Chaqueta de Cuero",
-          price: 89.99,
-          description: "Chaqueta resistente y estilosa, ideal para invierno.",
-        },
-        {
-          image:
-            "../img/productos/men/skinny-jeans-men.png",
-          name: "Jeans Ajustados",
-          price: 45.99,
-          description: "Jeans modernos con un ajuste perfecto.",
-        },
-        {
-          image:
-            "../img/productos/men/sport-shoes-men.png",
-          name: "Zapatos Deportivos",
-          price: 69.99,
-          description: "Zapatos cómodos para el día a día.",
-        },
-        {
-          image:
-            "../img/productos/men/wool-sweater-men.png",
-          name: "Suéter de Lana",
-          price: 35.99,
-          description: "Suéter cálido para los días fríos.",
-        },
-      ],
-    },
-    {
-      category: "mujer",
-      items: [
-        {
-          image:
-            "../img/productos/women/summer-dress-women.png",
-          name: "Vestido de Verano",
-          price: 39.99,
-          description: "Vestido ligero y fresco para el verano.",
-        },
-        {
-          image:
-            "../img/productos/women/silk-blouse-women.png",
-          name: "Blusa de Seda",
-          price: 29.99,
-          description: "Blusa suave y elegante, perfecta para el trabajo.",
-        },
-        {
-          image:
-            "../img/productos/women/silk-pants-women.png",
-          name: "Pantalones de Tela",
-          price: 49.99,
-          description: "Pantalones cómodos y versátiles.",
-        },
-        {
-          image:
-            "../img/productos/women/elegant-sandals-women.png",
-          name: "Sandalias Elegantes",
-          price: 25.99,
-          description: "Sandalias modernas para cualquier ocasión.",
-        },
-        {
-          image:
-            "../img/productos/women/jean-jacket-women.png",
-          name: "Chaqueta de Jean",
-          price: 55.99,
-          description: "Chaqueta casual para un look relajado.",
-        },
-      ],
-    },
-    {
-      category: "niños",
-      items: [
-        {
-          image:
-            "../img/productos/kids/funny-t-shirt-kids.png",
-          name: "Camiseta Divertida",
-          price: 15.99,
-          description: "Camiseta con diseño colorido para niños.",
-        },
-        {
-          image:
-            "../img/productos/kids/jeans-kids.png",
-          name: "Jeans para Niños",
-          price: 20.99,
-          description: "Jeans resistentes y cómodos para juegos.",
-        },
-        {
-          image:
-            "../img/productos/kids/sneakers-kids.png",
-          name: "Zapatillas Deportivas",
-          price: 35.99,
-          description: "Zapatillas cómodas y ligeras para niños activos.",
-        },
-        {
-          image:
-            "../img/productos/kids/warm-jacket-kids.png",
-          name: "Chaqueta Abrigadora",
-          price: 45.99,
-          description: "Chaqueta que protege del frío y viento.",
-        },
-        {
-          image:
-            "../img/productos/kids/funny-hat-kids.png",
-          name: "Gorro Divertido",
-          price: 10.99,
-          description: "Gorro con personajes favoritos para los pequeños.",
-        },
-      ],
-    },
-  ],
-};
+import data from "../json/productos.json" with {type: "json"};
 
-// Cargar datos
 document.addEventListener("DOMContentLoaded", function () {
+  // Función para dibujar una tarjeta de producto
+  dibujarTarjeta();
+});
+
+// Función para dibujar una tarjeta de producto
+function dibujarTarjeta(){
+  
   // obtenemos el contenedor para cada categoría
   const productosContainer = document.getElementById("productos-container");
 
@@ -160,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const figure = document.createElement("figure");
       const image = document.createElement("img");
       image.src = product.image;
-      image.classList.add("card-img-top");
+      // image.classList.add("card-img-top");
       image.alt = product.name;
 
       figure.appendChild(image);
@@ -198,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addToBag.id = "bag-shopping";
       addToBag.type = "button";
       addToBag.classList.add("card-button", "btn", "btn-outline-dark");
-      addToBag.innerHTML = `Agregar a la bolsa <i class="fa fa-cart-shopping"></i>`;
+      addToBag.innerHTML = `Agregar a la bolsa <i class="fa-solid fa-bag-shopping"></i>`;
 
       // Agregar el botón al footer de la tarjeta
       cardFooter.appendChild(addToBag);
@@ -221,4 +103,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Agregar el contenedor de la categoría al contenedor principal
     productosContainer.appendChild(categoryContainer);
   });
-});
+}

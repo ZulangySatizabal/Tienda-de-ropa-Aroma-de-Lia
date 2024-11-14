@@ -23,13 +23,21 @@
 
 <body>
     <header>
-        <!-- logo -->
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="logo" width="150">
-        </a>
+        <div class="logo-container">
+            <!-- logo -->
+            <a href="../index.html">
+                <img src="../assets/img/logo.png" alt="logo" width="150">
+            </a>
+
+            <!-- Botón de Home -->
+            <a href="../index.html" aria-expanded="false">
+                <i class="fa-sharp fa-solid fa-house"></i>
+            </a>
+        </div>
 
         <!-- Separación entre el logo y el resto de los elementos -->
         <div class="separator">
+
             <!-- Enlaces de categorías de productos -->
             <ul class="nav justify-content-end">
                 <li class="nav-item">
@@ -97,6 +105,7 @@
         </div>
     </footer>
 
-    <script src="../assets/js/productos.js"></script>
+    <script src="../assets/js/productos.js" type="module"></script>
 </body>
+
 </html>

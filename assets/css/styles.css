@@ -7,6 +7,20 @@ body{
 }
 a{
     cursor: pointer;
+    color: #000 !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover{
+    background-color: rgba(243, 156, 18, 0.8);
+}
+a>i{
+    font-size: 20px;
 }
 
 /* Estilos de encabezado */
@@ -20,15 +34,20 @@ header{
     
     background: rgb(255,229,162);
     background: radial-gradient(circle, rgba(255,229,162,0.7) 0%, rgba(252,255,108,0.15) 100%);
-
+}
+header .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 header .separator{
     display: flex;
     gap: 10px;
     padding-right: 15px;
 }
-header a{
-    color: #000 !important;
+
+header .btn-outline-dark:hover{
+    background-color: rgba(243, 156, 18, 0.8);    
 }
 
 /* Estilos de contenido principal */
