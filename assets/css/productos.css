@@ -34,7 +34,10 @@
 }
 
 .card-body, .card-footer{
-    background-color: #B6B6B6 !important;
+    background-color: #DDD5BC !important;
+}
+.card-body .card-text{
+    padding-top: 10px;
 }
 
 .card-title{
@@ -53,9 +56,11 @@
 .card-footer{
     display: flex;
     justify-content: center;
+    padding: 25px 0 !important;
 }
 .card-footer>.card-button{
-    background-color: #fff;
+    background-color: #735134;
+    color: #fff;
     margin: 0 auto;
 }
 .card-footer>.card-button:hover{

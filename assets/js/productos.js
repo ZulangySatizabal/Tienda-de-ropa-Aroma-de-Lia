@@ -16,6 +16,7 @@ function dibujarTarjeta(){
     // Crear un contenedor para la categoría
     const categoryContainer = document.createElement("div");
     categoryContainer.classList.add("category-container");
+    categoryContainer.id = category.category.toLowerCase();
 
     // creamos y asignamos el titulo de la categoría
     const categoryTitle = document.createElement("h2");
