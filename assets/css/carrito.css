@@ -1,0 +1,99 @@
+/* Estilo del carrito*/
+/* Estilo general del modal */
+#cart-preview {
+    position: fixed;
+    top: 23%;
+    right: 20%;
+    transform: translate(50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+    animation: fadeIn 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Contenido principal del modal */
+.preview-content {
+    padding: 20px;
+}
+
+
+/* Lista de productos */
+#cart-preview ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+/* Elementos de la lista */
+#cart-preview li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1rem;
+    border-bottom: 1px dashed #ddd;
+    color: #555;
+}
+
+/* Último elemento de la lista sin borde */
+#cart-preview li:last-child {
+    border-bottom: none;
+}
+
+
+
+#cart-preview button,
+#cart-preview a {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Botón de cerrar */
+#close-preview {
+    background: #f44336;
+    color: #ffffff;
+    border: none;
+    margin-right: 10px;
+}
+
+#close-preview:hover {
+    background: #d32f2f;
+}
+
+/* Botón de ir al carrito */
+#cart-preview a {
+    background: #4caf50;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+#cart-preview a:hover {
+    background: #388e3c;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(50%, -50%);
+    }
+}

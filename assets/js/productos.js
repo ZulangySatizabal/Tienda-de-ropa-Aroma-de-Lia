@@ -1,17 +1,67 @@
 import data from "../json/productos.json" with {type: "json"};
 
 document.addEventListener("DOMContentLoaded", function () {
+  let cartCount = 0; // Contador del carrito
+  const cart = []; // Lista de productos en el carrito
+
+  const productosContainer = document.getElementById("productos-container");
+  const cartCounter = document.querySelector("#cart-counter"); // Contador en el ícono del carrito
+
   // Función para dibujar una tarjeta de producto
   dibujarTarjeta();
+
+  // Escuchar eventos en los botones "Agregar a la bolsa"
+  productosContainer.addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON" || event.target.closest("button")) {
+      const button = event.target.closest("button");
+
+      // Obtener datos del producto
+      const card = button.closest(".card");
+      const productName = card.querySelector(".card-title").textContent;
+      const productPrice = parseFloat(
+        card.querySelector(".card-price").textContent.replace("$", "")
+      );
+
+      // Agregar el producto al carrito
+      cart.push({ name: productName, price: productPrice });
+      cartCount++;
+      cartCounter.textContent = cartCount;
+
+      alert(`${productName} ha sido añadido al carrito.`);
+    }
+  });
+
+  // Mostrar la vista previa del carrito
+  const cartIcon = document.querySelector(".fa-bag-shopping").parentElement;
+  cartIcon.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevenir navegación
+
+    // Crear la vista previa
+    const cartPreview = document.createElement("div");
+    cartPreview.id = "cart-preview";
+    cartPreview.innerHTML = `
+      <div class="preview-content">
+        <h4>Tu carrito</h4>
+        <ul>${cart
+          .map((item) => `<li>${item.name} - $${item.price.toFixed(2)}</li>`)
+          .join("")}</ul>
+        <button id="close-preview" class="btn btn-secondary">Cerrar</button>
+      </div>
+    `;
+    document.body.appendChild(cartPreview);
+
+    // Cerrar la vista previa
+    document.getElementById("close-preview").addEventListener("click", () => {
+      cartPreview.remove();
+    });
+  });
 });
 
-// Función para dibujar una tarjeta de producto
-function dibujarTarjeta(){
-  
-  // obtenemos el contenedor para cada categoría
+// Función para dibujar tarjetas desde el JSON
+function dibujarTarjeta() {
   const productosContainer = document.getElementById("productos-container");
 
-  // recorremos cada categoría
+  // Recorrer cada categoría
   data.products.forEach((category) => {
     // Crear un contenedor para la categoría
     const categoryContainer = document.createElement("div");
@@ -43,7 +93,6 @@ function dibujarTarjeta(){
       const figure = document.createElement("figure");
       const image = document.createElement("img");
       image.src = product.image;
-      // image.classList.add("card-img-top");
       image.alt = product.name;
 
       figure.appendChild(image);
