@@ -8,7 +8,7 @@ body{
 a{
     cursor: pointer;
     color: #000 !important;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem; 
     border-radius: 10px;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
     text-decoration: none;
@@ -20,7 +20,7 @@ a:hover{
     background-color: rgba(243, 156, 18, 0.8);
 }
 a>i{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 /* Estilos de encabezado */
@@ -30,7 +30,7 @@ header{
     justify-content: space-between;
     border-bottom: 1px solid rgba(0,0,0,0.3);
     gap: 12px;
-    padding: 0 16px;
+    padding: 0 1rem;
     
     background: rgb(255,229,162);
     background: radial-gradient(circle, rgba(255,229,162,0.7) 0%, rgba(252,255,108,0.15) 100%);
@@ -42,8 +42,19 @@ header .logo-container {
 }
 header .separator{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
-    padding-right: 15px;
+    padding-right: 0.9375rem;
+
+    width: 100%;
+}
+.separator .nav {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0;
+    margin: 0;
 }
 
 header .btn-outline-dark:hover{
@@ -53,7 +64,7 @@ header .btn-outline-dark:hover{
 /* Estilos de contenido principal */
 main{
     background-color: #fdf2e5;
-    padding: 40px 80px;
+    padding: 2.5rem 5rem;
 }
 
 /* Estilos del pie de pagina */
@@ -79,10 +90,68 @@ footer div strong{
     display: block;
     color: #eee;
 }
+
 /*Mantener el footer abajo sin importar el contenido*/
 body{
     display: grid;
     min-height: 100dvh;
     grid-template-rows:
         auto 1fr auto;
+}
+
+/* Diseño responsive */
+@media screen and (max-width: 860px) {
+    /* Header */
+    header {
+        flex-direction: column;  /* Cambiar la dirección del header a columna */
+        align-items: flex-start; /* Alinear los elementos a la izquierda */
+        gap: 10px;               /* Reducir el espacio entre los elementos */
+        padding: 1rem;           /* Reducir el padding */
+    }
+
+    /* Separador dentro del header */
+    .separator {
+        justify-content: flex-start;  /* Alinear los elementos dentro de .separator a la izquierda */
+        width: 100%;                  /* Asegura que .separator ocupe todo el ancho disponible */
+    }
+
+    /* Navegación dentro del header */
+    .separator .nav {
+        flex-grow: 1;                /* Permite que el <ul> ocupe el espacio disponible */
+        flex-shrink: 0;              /* Evitar que el <ul> se encoja */
+        padding: 0;                  /* Eliminar el padding */
+        margin: 0;                   /* Eliminar el margen */
+        justify-content: center;     /* Centrar los elementos en el <ul> */
+        flex-wrap: wrap;             /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    }
+
+    /* Botones dentro del header */
+    .separator a.btn {
+        margin-left: 0;  /* Asegura que los botones no tengan márgenes innecesarios */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;  /* Cambiar la dirección del header a columna */
+        padding: 0.5rem;          /* Reducir padding aún más */
+    }
+
+    /* Separador dentro del header */
+    .separator {
+        justify-content: flex-start;  /* Alinear los elementos dentro de .separator a la izquierda */
+        width: 100%;                  /* Asegura que .separator ocupe todo el ancho disponible */
+    }
+
+    /* Navegación dentro del header */
+    .separator .nav {
+        flex-grow: 1;                /* Permite que el <ul> ocupe el espacio disponible */
+        justify-content: space-evenly; /* Distribuir los elementos dentro del <ul> de forma equitativa */
+    }
+
+    /* Botones dentro del header */
+    .separator a.btn {
+        margin-left: 0;  /* Asegura que los botones no tengan márgenes innecesarios */
+    }
 }
