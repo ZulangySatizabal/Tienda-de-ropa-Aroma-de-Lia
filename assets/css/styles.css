@@ -4,8 +4,10 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif !important;
+
+    padding-top: 6.375rem; 
 }
-a{
+a, button{
     cursor: pointer;
     color: #000 !important;
     padding: 0.625rem 1.25rem; 
@@ -16,7 +18,7 @@ a{
     justify-content: center;
     align-items: center;
 }
-a:hover{
+a:hover , button:hover{
     background-color: rgba(243, 156, 18, 0.8) !important;
 }
 a>i{
@@ -33,7 +35,14 @@ header{
     padding: 0 1rem;
     
     background: rgb(255,229,162);
+    /* background: radial-gradient(circle, #F4E2C6 0%, #D2B48C 100%); */
     background: radial-gradient(circle, rgba(255,229,162,0.7) 0%, rgba(252,255,108,0.15) 100%);
+
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    z-index: 1000;
 }
 header .logo-container {
     display: flex;
@@ -43,7 +52,7 @@ header .logo-container {
 header .separator{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 10px;
     padding-right: 0.9375rem;
 

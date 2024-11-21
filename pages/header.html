@@ -19,38 +19,56 @@
 
     <!-- Separación entre el logo y el resto de los elementos -->
     <div class="separator">
-        <!-- Enlaces de categorías de productos -->
+        <!-- Enlaces de categorías de productos -->      
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Categorías
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" aria-current="page" href="productos.html#hombre">Hombres</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="pages/productos.html#mujer">Mujeres</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="pages/productos.html#niños">Niños</a>
-                </li>
-            </ul>
+            <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos
+            </a>
+            <div id="filter-buttons">
+                <ul class="dropdown-menu">
+                    <li>
+                        <a data-filter="all" class="dropdown-item"  href="productos.html">
+                            Todos los productos
+                        </a>
+                    </li>
+                    <li>
+                        <a data-filter="hombre" class="dropdown-item" href="productos.html#hombre">
+                            Hombres
+                        </a>
+                    </li>
+                    <li>
+                        <a data-filter="mujer" class="dropdown-item" href="productos.html#mujer">
+                            Mujeres
+                        </a>
+                    </li>
+                    <li>
+                        <a data-filter="niños" class="dropdown-item" href="productos.html#niños">
+                            Niños
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
+        <!-- <div id="filter-buttons">
+            <button data-filter="all" class="btn btn-outline-dark">Todos</button>
+            <button data-filter="hombre" class="btn btn-outline-dark">Hombres</button>
+            <button data-filter="mujer" class="btn btn-outline-dark">Mujeres</button>
+            <button data-filter="niños" class="btn btn-outline-dark">Niños</button>
+        </div> -->
 
         <!-- Botón de Bolsa de compras -->
-        <a href="pages/shooping-bag.html" class="btn btn-outline-dark" aria-expanded="false">
+        <a href="#" class="btn btn-outline-secondary">
             <i class="fa-solid fa-bag-shopping"></i>
+            <span id="cart-counter" class="badge bg-danger">0</span>
         </a>
 
         <!-- Botón de búsqueda -->
-        <a href="pages/productos.html" class="btn btn-outline-secondary" id="button-addon2">
+        <a href="productos.html" class="btn btn-outline-secondary">
             <i class="fa-solid fa-magnifying-glass"></i>
         </a>
 
         <!-- Botón de contacto -->
-        <a href="pages/contacto.html" class="btn btn-outline-dark">Contáctenos</a>
+        <a href="contacto.html" class="btn btn-outline-dark">Contáctenos</a>
     </div>
 </header>
 
