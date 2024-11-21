@@ -17,7 +17,7 @@ a{
     align-items: center;
 }
 a:hover{
-    background-color: rgba(243, 156, 18, 0.8);
+    background-color: rgba(243, 156, 18, 0.8) !important;
 }
 a>i{
     font-size: 1.25rem;
@@ -49,13 +49,13 @@ header .separator{
 
     width: 100%;
 }
-.separator .nav {
+/* .separator .nav-category {
     display: flex;
     flex-grow: 1;
     flex-shrink: 0;
     padding: 0;
     margin: 0;
-}
+} */
 
 header .btn-outline-dark:hover{
     background-color: rgba(243, 156, 18, 0.8);    
