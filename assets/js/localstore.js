@@ -35,30 +35,38 @@ class LocalStorageHandler {
   }
 }
 
-// Manejo del registro
-document.getElementById("register-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirm-password").value;
-
-  const success = LocalStorageHandler.registerUser(name, email, password, confirmPassword);
-  if (success) {
-    window.location.href = "login.html"; // Redirige al login después del registro
+document.addEventListener('DOMContentLoaded', function() {
+  // Manejo del registro
+  const register = document.getElementById('register-form');
+  if (register) {
+    register.addEventListener("submit", function (e) {
+      e.preventDefault();
+    
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm-password").value;
+    
+      const success = LocalStorageHandler.registerUser(name, email, password, confirmPassword);
+      if (success) {
+        window.location.href = "login.html"; // Redirige al login después del registro
+      }
+    });
   }
-});
 
-// Manejo del inicio de sesión
-document.getElementById("login-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const email = document.getElementById("login-email").value;
-  const password = document.getElementById("login-password").value;
-
-  const success = LocalStorageHandler.loginUser(email, password);
-  if (success) {
-    window.location.href = "index.html"; // Redirige al index si el login es exitoso
+    
+  // Manejo del inicio de sesión
+  const login = document.getElementById("login-form")
+  if (login){
+    login.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const email = document.getElementById("login-email").value;
+      const password = document.getElementById("login-password").value;
+    
+      const success = LocalStorageHandler.loginUser(email, password);
+      if (success) {
+        window.location.href = "../../index.html"; // Redirige al index si el login es exitoso
+      }
+    });
   }
 });
