@@ -1,14 +1,14 @@
 /* Globales */
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif !important;
 }
-a, button{
+a, button {
     cursor: pointer;
     color: #000 !important;
-    padding: 0.625rem 1.25rem; 
+    padding: 0.625rem 1.25rem;
     border-radius: 10px;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
     text-decoration: none;
@@ -16,25 +16,30 @@ a, button{
     justify-content: center;
     align-items: center;
 }
-a:hover , button:hover{
+a:hover,
+button:hover {
     background-color: rgba(243, 156, 18, 0.8) !important;
 }
-a>i{
+a > i {
     font-size: 1.25rem;
 }
 
 /* Estilos de encabezado */
-header{
-    padding: 0 1rem; 
-    border-bottom: 1px solid rgba(0,0,0,0.3);
-    background: rgb(255,229,162);
+header {
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgb(255, 229, 162);
     /* background: radial-gradient(circle, #F4E2C6 0%, #D2B48C 100%); */
-    background: radial-gradient(circle, rgba(255,229,162,0.7) 0%, rgba(252,255,108,0.15) 100%);
+    background: radial-gradient(
+        circle,
+        rgba(255, 229, 162, 0.7) 0%,
+        rgba(252, 255, 108, 0.15) 100%
+    );
 
     width: 100%;
-	left: 0;
-	top: 0;
-	position: fixed;
+    left: 0;
+    top: 0;
+    position: fixed;
     z-index: 1000;
 }
 header .logo-container {
@@ -44,55 +49,128 @@ header .logo-container {
 }
 
 /* Estilos de contenido principal */
-main{
+main {
     background-color: #fdf2e5;
     padding: 2.5rem;
     padding-top: 14rem !important;
 }
 
 /* Estilos del pie de pagina */
-footer ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-footer ul li a{
-    color: #eee;
-    text-decoration: none;
-}
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.footer {
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
     padding: 30px 20px;
     background-color: #222f3e;
 }
 
-footer div strong{
-    margin-bottom: 20px;
-    display: block;
-    color: #eee;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px 0;
+    padding: 0 15px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.footer-section ul li a:hover {
+    color: #f4b400; 
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 22px;
+    transition: color 0.3s;
+    text-decoration: none;
+    
+}
+
+.social-icons a:hover {
+    color: #f4b400;
+}
+
+/* Estilo para los créditos en el footer */
+.footer-credits {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+.footer-credits p {
+    display: inline;
+}
+.footer-credits a {
+    text-decoration: none;
+    display: inline;
+    padding: 5px;
 }
 
 /*Mantener el footer abajo sin importar el contenido*/
-body{
+body {
     display: grid;
     min-height: 100dvh;
-    grid-template-rows:
-        auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
 }
 
 /* Diseño responsive */
 @media screen and (max-width: 860px) {
-    /* Header */  
-    header{
+  /* Header */
+    header {
         background-color: #feefc4;
     }
-    #nav-toggle{
-        background-color: #feefc4; 
+    #nav-toggle {
+        background-color: #feefc4;
         padding: 20px 0;
     }
-    .dropdown-menu{
+    .dropdown-menu {
         background-color: #feefc4 !important;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
     }
 }
