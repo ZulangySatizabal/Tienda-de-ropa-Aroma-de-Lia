@@ -24,73 +24,99 @@
 
 <body>
     
-<header>
-    <div class="logo-container">
-        <!-- logo -->
-        <a href="../index.html">
-            <img src="../assets/img/logo.png" alt="logo" width="150">
-        </a>
+    <header>
 
-        <!-- Botón de Home -->
-        <a href="../index.html" aria-expanded="false">
-            <i class="fa-sharp fa-solid fa-house"></i>
-        </a>
-    </div>
-
-    <!-- Separación entre el logo y el resto de los elementos -->
-    <div class="separator">
-        <!-- Enlaces de categorías de productos -->      
-        <div class="dropdown">
-            <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Productos
-            </a>
-            <div id="filter-buttons">
-                <ul class="dropdown-menu">
-                    <li>
-                        <a data-filter="all" class="dropdown-item"  href="productos.html">
-                            Todos los productos
-                        </a>
-                    </li>
-                    <li>
-                        <a data-filter="hombre" class="dropdown-item" href="productos.html#hombre">
-                            Hombres
-                        </a>
-                    </li>
-                    <li>
-                        <a data-filter="mujer" class="dropdown-item" href="productos.html#mujer">
-                            Mujeres
-                        </a>
-                    </li>
-                    <li>
-                        <a data-filter="niños" class="dropdown-item" href="productos.html#niños">
-                            Niños
-                        </a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="logo-container">
+                    <!-- logo -->
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../assets/img/logo.png" alt="logo" width="150">
+                    </a>
+    
+                    <!-- Botón de Home -->
+                    <a class="nav-link active p-2" aria-current="page" href="../index.html">
+                        <i class="fa-sharp fa-solid fa-house"></i>
+                    </a>
+                </div>
+    
+                <!-- Botón de menú para dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggle"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <!-- Elementos de la barra de navegación -->
+                <div class="collapse navbar-collapse" id="nav-toggle">
+                    <ul class="navbar-nav ms-auto ,b-2 mb-lg-0">
+                        <!-- Enlaces de categorías de productos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle p-3" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu" id="filter-buttons">
+                                <li>
+                                    <a data-filter="all" class="dropdown-item" href="/pages/productos.html">
+                                        Todos los productos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-filter="hombre" class="dropdown-item" href="/pages/productos.html#hombre">
+                                        Hombres
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-filter="mujer" class="dropdown-item" href="/pages/productos.html#mujer">
+                                        Mujeres
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-filter="niños" class="dropdown-item" href="/pages/productos.html#niños">
+                                        Niños
+                                    </a>
+                                </li>
+                            </ul>
+    
+                        </li>
+    
+    
+                        <!-- Botón de Bolsa de compras -->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link d-flex justify-content-start p-3">
+                                <i class="fa-solid fa-bag-shopping"></i>
+    
+                                <span id="cart-counter" class="badge bg-danger ms-2 me-2">0</span>
+    
+                                <small class="d-md-none ms-2">Bolsa de compra</small>
+                            </a>
+                        </li>
+    
+                        <hr class="text-black">
+    
+                        <!-- Botón de búsqueda -->
+                        <li class="nav-item">
+                            <a href="/pages/productos.html" class="nav-link p-3">
+                                <i class="fa-solid fa-magnifying-glass">    </i>
+                                <small class="d-md-none ms-2">Buscador</small>
+                            </a>
+                        </li>
+    
+                        <!-- Botón de contacto -->
+                        <li class="nav-item mt-2">
+                            <a href="/pages/contacto.html" class="btn btn-outline-dark">
+                                Contáctenos
+                            </a>
+                        </li>
+    
+                    </ul>
+    
+                </div> <!-- .collapse -->
             </div>
-        </div>
-        <!-- <div id="filter-buttons">
-            <button data-filter="all" class="btn btn-outline-dark">Todos</button>
-            <button data-filter="hombre" class="btn btn-outline-dark">Hombres</button>
-            <button data-filter="mujer" class="btn btn-outline-dark">Mujeres</button>
-            <button data-filter="niños" class="btn btn-outline-dark">Niños</button>
-        </div> -->
-
-        <!-- Botón de Bolsa de compras -->
-        <a href="#" class="btn btn-outline-secondary">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span id="cart-counter" class="badge bg-danger">0</span>
-        </a>
-
-        <!-- Botón de búsqueda -->
-        <a href="productos.html" class="btn btn-outline-secondary">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </a>
-
-        <!-- Botón de contacto -->
-        <a href="contacto.html" class="btn btn-outline-dark">Contáctenos</a>
-    </div>
-</header>
+        </nav>
+    
+    </header>
+    <!-- <div id="header"></div> -->
 
     <main>
         <section id="productos-container" class="productos-container">
@@ -102,7 +128,7 @@
     <div id="footer"></div>
 
     <!-- scripts -->
-    <!-- <script type="module" src="../assets/js/loadContent.js"></script> -->
+    <script src="../assets/js/loadContent.js"></script>
 
     <script src="../assets/js/productos.js" type="module"></script>
     <script src="../assets/js/carrito.js" type="module"></script>

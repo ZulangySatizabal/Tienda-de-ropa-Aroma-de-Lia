@@ -4,8 +4,6 @@ body{
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif !important;
-
-    padding-top: 6.375rem; 
 }
 a, button{
     cursor: pointer;
@@ -27,21 +25,16 @@ a>i{
 
 /* Estilos de encabezado */
 header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 0 1rem; 
     border-bottom: 1px solid rgba(0,0,0,0.3);
-    gap: 12px;
-    padding: 0 1rem;
-    
     background: rgb(255,229,162);
     /* background: radial-gradient(circle, #F4E2C6 0%, #D2B48C 100%); */
     background: radial-gradient(circle, rgba(255,229,162,0.7) 0%, rgba(252,255,108,0.15) 100%);
 
-    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
-	left: 0; /* Posicionamos la cabecera al lado izquierdo */
-	top: 0; /* Posicionamos la cabecera pegada arriba */
-	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
     z-index: 1000;
 }
 header .logo-container {
@@ -49,31 +42,12 @@ header .logo-container {
     align-items: center;
     gap: 10px;
 }
-header .separator{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    padding-right: 0.9375rem;
-
-    width: 100%;
-}
-/* .separator .nav-category {
-    display: flex;
-    flex-grow: 1;
-    flex-shrink: 0;
-    padding: 0;
-    margin: 0;
-} */
-
-header .btn-outline-dark:hover{
-    background-color: rgba(243, 156, 18, 0.8);    
-}
 
 /* Estilos de contenido principal */
 main{
     background-color: #fdf2e5;
-    padding: 2.5rem 5rem;
+    padding: 2.5rem;
+    padding-top: 14rem !important;
 }
 
 /* Estilos del pie de pagina */
@@ -110,57 +84,15 @@ body{
 
 /* Diseño responsive */
 @media screen and (max-width: 860px) {
-    /* Header */
-    header {
-        flex-direction: column;  /* Cambiar la dirección del header a columna */
-        align-items: flex-start; /* Alinear los elementos a la izquierda */
-        gap: 10px;               /* Reducir el espacio entre los elementos */
-        padding: 1rem;           /* Reducir el padding */
+    /* Header */  
+    header{
+        background-color: #feefc4;
     }
-
-    /* Separador dentro del header */
-    .separator {
-        justify-content: flex-start;  /* Alinear los elementos dentro de .separator a la izquierda */
-        width: 100%;                  /* Asegura que .separator ocupe todo el ancho disponible */
+    #nav-toggle{
+        background-color: #feefc4; 
+        padding: 20px 0;
     }
-
-    /* Navegación dentro del header */
-    .separator .nav {
-        flex-grow: 1;                /* Permite que el <ul> ocupe el espacio disponible */
-        flex-shrink: 0;              /* Evitar que el <ul> se encoja */
-        padding: 0;                  /* Eliminar el padding */
-        margin: 0;                   /* Eliminar el margen */
-        justify-content: center;     /* Centrar los elementos en el <ul> */
-        flex-wrap: wrap;             /* Permite que los elementos se envuelvan en pantallas pequeñas */
-    }
-
-    /* Botones dentro del header */
-    .separator a.btn {
-        margin-left: 0;  /* Asegura que los botones no tengan márgenes innecesarios */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    /* Header */
-    header {
-        flex-direction: column;  /* Cambiar la dirección del header a columna */
-        padding: 0.5rem;          /* Reducir padding aún más */
-    }
-
-    /* Separador dentro del header */
-    .separator {
-        justify-content: flex-start;  /* Alinear los elementos dentro de .separator a la izquierda */
-        width: 100%;                  /* Asegura que .separator ocupe todo el ancho disponible */
-    }
-
-    /* Navegación dentro del header */
-    .separator .nav {
-        flex-grow: 1;                /* Permite que el <ul> ocupe el espacio disponible */
-        justify-content: space-evenly; /* Distribuir los elementos dentro del <ul> de forma equitativa */
-    }
-
-    /* Botones dentro del header */
-    .separator a.btn {
-        margin-left: 0;  /* Asegura que los botones no tengan márgenes innecesarios */
+    .dropdown-menu{
+        background-color: #feefc4 !important;
     }
 }

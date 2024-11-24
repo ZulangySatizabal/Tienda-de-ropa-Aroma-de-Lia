@@ -68,3 +68,10 @@
     background-color: #dc3545;
     color: white;
 }
+
+/* responsive  */
+@media screen and (max-width: 860px) {
+    .preview-content {
+        width: 300px;
+    }
+}
