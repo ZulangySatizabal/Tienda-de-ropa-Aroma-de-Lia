@@ -58,11 +58,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Función para dibujar tarjetas desde el JSON
-function dibujarTarjeta(filter) {
+function dibujarTarjeta(filter = "all") {
   const productosContainer = document.getElementById("productos-container");
+
+  productosContainer.innerHTML = "";
 
   // Recorrer cada categoría
   data.products.forEach((category) => {
+
+    // Verificar si hay productos en la categoría
+    const filteredItems = category.items.filter(item =>
+      filter === "all" || item.tags.includes(filter)
+    );
+
+    /* ===========
+      NO FUNCIONA el filtro de la categoría
+      ===========
+    */
+    if (!category.items || filteredItems.length === 0) {
+      console.log(`Categoría sin productos: ${category.category}`);
+      return; // Saltar esta categoría
+    }
+
     const categoryContainer = document.createElement("div");
     categoryContainer.classList.add("category-container");
     categoryContainer.id = category.category.toLowerCase();
@@ -77,7 +94,7 @@ function dibujarTarjeta(filter) {
     cardContainer.classList.add("row", "row-cols-1", "row-cols-md-3", "g-4");
 
     // Agregar tarjetas de productos
-    category.items.forEach((product) => {
+    filteredItems.forEach((product) => {
       const col = document.createElement("div");
       col.classList.add("col");
 
@@ -132,3 +149,4 @@ function dibujarTarjeta(filter) {
   });
 }
 
+export default dibujarTarjeta;

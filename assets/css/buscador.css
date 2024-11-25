@@ -1,0 +1,25 @@
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin: 0 10px;
+}
+.search-bar {
+    border: 1px solid #d8a47f;
+    background-color: #fff8f1;
+    transition: width 0.5s ease-in-out, max-width 0.5s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #5a3d2b;
+    border: none;
+    outline: none;   
+    overflow: hidden; 
+}
+.search-bar.show {
+    max-width: 200px; /* Ancho máximo cuando se expande */
+}
+.search-icon {
+    font-size: 1.5rem;
+}

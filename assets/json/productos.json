@@ -3,35 +3,45 @@
     {
       "category": "hombre",
       "items": [
-        {
+        { 
+          "id": 1,
           "image": "../assets/img/productos/men/casual-shirt-men.avif",
           "name": "Camisa Casual",
           "price": 25.99,
-          "description": "Camisa de algodón para ocasiones informales."
+          "description": "Camisa de algodón para ocasiones informales.",
+          "tags": ["camisas", "informal"]
         },
         {
+          "id": 2,
           "image": "../assets/img/productos/men/leather-jacket-men.png",
           "name": "Chaqueta de Cuero",
           "price": 89.99,
-          "description": "Chaqueta resistente y estilosa, ideal para invierno."
+          "description": "Chaqueta resistente y estilosa, ideal para invierno.",
+          "tags": ["chaquetas", "invierno"]
         },
         {
+          "id": 3,
           "image": "../assets/img/productos/men/skinny-jeans-men.png",
           "name": "Jeans Ajustados",
           "price": 45.99,
-          "description": "Jeans modernos con un ajuste perfecto."
+          "description": "Jeans modernos con un ajuste perfecto.",
+          "tags": ["jeans", "pantalones"]
         },
         {
+          "id": 4,
           "image": "../assets/img/productos/men/sport-shoes-men.png",
           "name": "Zapatos Deportivos",
           "price": 69.99,
-          "description": "Zapatos cómodos para el día a día."
+          "description": "Zapatos cómodos para el día a día.",
+          "tags": ["zapatos", "deportivo"]
         },
         {
+          "id": 5,
           "image": "../assets/img/productos/men/wool-sweater-men.png",
           "name": "Suéter de Lana",
           "price": 35.99,
-          "description": "Suéter cálido para los días fríos."
+          "description": "Suéter cálido para los días fríos.",
+          "tags": ["suéteres", "invierno"]
         }
       ]
     },
@@ -39,34 +49,44 @@
       "category": "mujer",
       "items": [
         {
+          "id": 6,
           "image": "../assets/img/productos/women/summer-dress-women.png",
           "name": "Vestido de Verano",
           "price": 39.99,
-          "description": "Vestido ligero y fresco para el verano."
+          "description": "Vestido ligero y fresco para el verano.",
+          "tags": ["vestidos", "verano"]
         },
         {
+          "id": 7,
           "image": "../assets/img/productos/women/silk-blouse-women.png",
           "name": "Blusa de Seda",
           "price": 29.99,
-          "description": "Blusa suave y elegante, perfecta para el trabajo."
+          "description": "Blusa suave y elegante, perfecta para el trabajo.",
+          "tags": ["blusas", "formal", "seda"]
         },
         {
+          "id": 8,
           "image": "../assets/img/productos/women/silk-pants-women.png",
           "name": "Pantalones de Tela",
           "price": 49.99,
-          "description": "Pantalones cómodos y versátiles."
+          "description": "Pantalones cómodos y versátiles.",
+          "tags": ["pantalones", "tela"]
         },
         {
+          "id": 9,
           "image": "../assets/img/productos/women/elegant-sandals-women.png",
           "name": "Sandalias Elegantes",
           "price": 25.99,
-          "description": "Sandalias modernas para cualquier ocasión."
+          "description": "Sandalias modernas para cualquier ocasión.",
+          "tags": ["zapatos", "sandalias", "elegante"]
         },
         {
+          "id": 10,
           "image": "../assets/img/productos/women/jean-jacket-women.png",
           "name": "Chaqueta de Jean",
           "price": 55.99,
-          "description": "Chaqueta casual para un look relajado."
+          "description": "Chaqueta casual para un look relajado.",
+          "tags": ["chaquetas", "jean"]
         }
       ]
     },
@@ -74,34 +94,44 @@
       "category": "niños",
       "items": [
         {
+          "id": 11,
           "image": "../assets/img/productos/kids/funny-t-shirt-kids.png",
           "name": "Camiseta Divertida",
           "price": 15.99,
-          "description": "Camiseta con diseño colorido para niños."
+          "description": "Camiseta con diseño colorido para niños.",
+          "tags": ["camisetas"]
         },
         {
+          "id": 12,
           "image": "../assets/img/productos/kids/jeans-kids.png",
           "name": "Jeans para Niños",
           "price": 20.99,
-          "description": "Jeans resistentes y cómodos para juegos."
+          "description": "Jeans resistentes y cómodos para juegos.",
+          "tags": ["jeans", "pantalones"]
         },
         {
+          "id": 13,
           "image": "../assets/img/productos/kids/sneakers-kids.png",
           "name": "Zapatillas Deportivas",
           "price": 35.99,
-          "description": "Zapatillas cómodas y ligeras para niños activos."
+          "description": "Zapatillas cómodas y ligeras para niños activos.",
+          "tags": ["zapatos", "deportivo"]
         },
         {
+          "id": 14,
           "image": "../assets/img/productos/kids/warm-jacket-kids.png",
           "name": "Chaqueta Abrigadora",
           "price": 45.99,
-          "description": "Chaqueta que protege del frío y viento."
+          "description": "Chaqueta que protege del frío y viento.",
+          "tags": ["chaquetas", "invierno"]
         },
         {
+          "id": 15,
           "image": "../assets/img/productos/kids/funny-hat-kids.png",
           "name": "Gorro Divertido",
           "price": 10.99,
-          "description": "Gorro con personajes favoritos para los pequeños."
+          "description": "Gorro con personajes favoritos para los pequeños.",
+          "tags": ["accesorios", "gorros"]
         }
       ]
     }
