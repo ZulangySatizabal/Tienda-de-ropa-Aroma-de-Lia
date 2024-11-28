@@ -1,6 +1,6 @@
 # Tienda de Ropa, Aroma de Lía
 
-Este proyecto, desarrollado como trabajo final del bootcamp de programación básica Talento Tech de MinTIC en colaboración con la Universidad Libre, es un e-commerce llamado Tienda de Ropa, Aroma de Lía.
+Este proyecto, desarrollado como trabajo final del Bootcamp de programación básica Talento Tech de MinTIC en colaboración con la Universidad Libre, es un e-commerce llamado Tienda de Ropa, Aroma de Lía.
 
 ## Descripción del Proyecto
 
@@ -26,15 +26,18 @@ Además, se simuló una base de datos usando JSON para almacenar información so
 - Página de contacto para información adicional.
 - Diseño adaptativo y optimizado para diferentes dispositivos.
 
-## Instalación
+## Proyecto en Vercel
 
-**AÚN NO ES POSIBLE**
+Accede a la versión desplegada del proyecto aquí: 
+    [Tienda de Ropa, Aroma de Lía en Vercel](https://tienda-de-ropa-aroma-de-lia.vercel.app/)
+
+## Instalación
 
 Para ejecutar el proyecto localmente, sigue estos pasos:
 
 1. Clona el repositorio:
     ```bash
-    git clone <url-del-repositorio>
+    git clone https://github.com/ZulangySatizabal/Tienda-de-ropa-Aroma-de-Lia
     ```
 2. Abre el archivo `index.html` en tu navegador web.
 
@@ -43,6 +46,10 @@ Para ejecutar el proyecto localmente, sigue estos pasos:
 1. Navega por el catálogo de productos y añade los que desees al carrito de compras.
 2. Revisa los detalles en la sección del carrito.
 3. Finaliza la compra simulada.
+
+## Documentación
+
+[Carpeta de documentación](https://1drv.ms/f/s!Aq98ffmz_RMgg70z8Ri0tsgf0SINMw?e=Z45H1Z)
 
 ## Créditos
 
