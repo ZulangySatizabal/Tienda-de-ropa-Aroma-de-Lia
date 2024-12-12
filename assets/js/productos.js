@@ -10,6 +10,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para dibujar una tarjeta de producto
   dibujarTarjeta("all");
 
+  // Función para mostrar la alerta personalizada
+  function showAlert(message, type = "success") {
+    const alert = document.getElementById("custom-alert");
+
+    // Aplica el estilo según el tipo (success, error, etc.)
+    if (type === "success") {
+      alert.style.backgroundColor = "#4caf50"; // Verde para éxito
+    } else if (type === "error") {
+      alert.style.backgroundColor = "#f44336"; // Rojo para error
+    }
+
+    // Muestra el mensaje
+    alert.textContent = message;
+    alert.classList.remove("hidden");
+    alert.classList.add("show");
+
+    // Oculta la alerta después de 3 segundos
+    setTimeout(() => {
+      alert.classList.remove("show");
+      alert.classList.add("hidden");
+    }, 2000);
+  }
+
   // Escuchar eventos en los botones "Agregar a la bolsa"
   productosContainer.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON" || event.target.closest("button")) {
@@ -27,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
       cartCount++;
       cartCounter.textContent = cartCount;
 
-      alert(`${productName} ha sido añadido al carrito.`);
+      // Mostrar la alerta personalizada
+      showAlert(`${productName} ha sido añadido al carrito.`, "success");
     }
   });
 
@@ -103,6 +127,7 @@ function dibujarTarjeta(filter = "all") {
 
       const figure = document.createElement("figure");
       const image = document.createElement("img");
+      image.classList.add("card-image");
       image.src = product.image;
       image.alt = product.name;
 
